@@ -1,0 +1,7 @@
+GET https://jsonplaceholder.typicode.com/todos
+
+###
+DELETE https://jsonplaceholder.typicode.com/todos/15
+Content-Type: application/json
+
+

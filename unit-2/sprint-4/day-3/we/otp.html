@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otp</title>
+</head>
+<body>
+    <input type="number">
+    <button>submit</button>
+</body>
+</html>
+<script>
+        document.querySelector("button").addEventListener("click",()=>{
+            let input=document.querySelector("input").value;
+
+            let result=new Promise((yes,no)=>{
+                if(input=="1234"){
+                    yes("password is matching")
+                }else{
+                    no("password is not matching")
+                }
+            })
+            console.log(result);
+            result.then((x)=>console.log(x)).catch((y)=>console.log(y))
+
+        })
+</script>

@@ -1,0 +1,24 @@
+.red{
+    background-color: red;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+}
+.yellow{
+    background-color: rgb(197, 148, 34);
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+}
+.blue{
+    background-color: blue;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+}
+.green{
+    background-color: green;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+}

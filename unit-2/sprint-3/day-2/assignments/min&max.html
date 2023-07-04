@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>min&max</title>
+    <style>
+        #container {
+            margin: auto;
+            height: auto;
+            width: 600px;
+            /* border: 1px solid red; */
+            text-align: center;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+
+        #box1 {
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            height: 20%;
+            width: 100%;
+            /* border: 1px solid blue; */
+        }
+
+        #box1>div {
+            height: 40%;
+            width: 20%;
+            text-align: center;
+            padding-top: 20px;
+            font-size: 30px;
+            border: 2px solid black;
+
+        }
+
+        #box1>div:nth-child(1) {
+
+            background-color: red;
+            color: black;
+            margin-left: 50px;
+            height: 60px;
+        }
+
+        #box1>div:nth-child(2) {
+            height: 60px;
+            background-color: green;
+            color: black;
+            margin-right: 50px;
+        }
+
+        #box2 {
+            padding-top: 30px;
+            width: 60%;
+            height: auto;
+            margin: auto;
+            /* border: 1px solid blue; */
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(6);
+            gap: 20px;
+
+        }
+
+        #box2>div {
+            padding-top: 20px;
+            height: 50px;
+            width: 70px;
+            border: 2px solid black;
+            margin: auto;
+            font-size: 30px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        #display {
+            height: 80px;
+            width: 55%;
+            border: 2px solid black;
+            margin: auto;
+            background-color: rgb(131, 135, 138);
+            font-size: 50px;
+            padding-top: 30px;
+        }
+
+        #box2>div:nth-child(11) {
+
+            grid-column-start: 1;
+            grid-column-end: 4;
+            width: 85%;
+            margin-bottom: 10px;
+            background-color: black;
+            color: white;
+
+        }
+
+        #box2>div:nth-child(10) {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            background-color: darkorchid;
+            color: white;
+        }
+
+        .orange {
+            background-color: rgba(210, 92, 29, 0.969);
+
+        }
+
+        .green {
+            background-color: rgb(12, 86, 12);
+        }
+        #box2>div:hover{
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="box1">
+            <div id="min">43</div>
+            <div id="max">2019</div>
+        </div>
+        <h1>Score</h1>
+        <div id="display">#</div>
+        <div id="box2">
+            <div class="green">1</div>
+            <div class="orange">2</div>
+            <div class="green">3</div>
+            <div class="orange">4</div>
+            <div class="orange">5</div>
+            <div class="orange">6</div>
+            <div class="green">7</div>
+            <div class="orange">8</div>
+            <div class="green">9</div>
+            <div>0</div>
+            <div>ENTER</div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+        let data= document.querySelectorAll("#box2>div");
+        let bag="";
+        for(let i=0; i<data.length; i++){
+            data[i].addEventListener("click",myfun)
+        }
+            function myfun(event){
+                let minium=document.querySelector("#min").innerText;
+                let maxium=document.querySelector("#max").innerText;
+                // console.log(maxium)
+                if(event.target.innerText!="ENTER"){
+                    bag+=event.target.innerText;
+                }
+                
+                if(event.target.innerText=="ENTER" && bag<maxium){
+                    document.querySelector("#min").innerText=bag;
+                // document.querySelector("#display").innerText=minium;
+                }else if(event.target.innerText=="ENTER" && bag>maxium){
+                    document.querySelector("#max").innerText=bag;
+                    // document.querySelector("#display").innerText=maxium;
+                }
+                else{
+                    document.querySelector("#display").innerText=bag;
+                }
+                
+            }
+        
+
+</script>

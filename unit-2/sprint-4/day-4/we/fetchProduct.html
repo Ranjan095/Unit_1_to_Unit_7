@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fetch Product</title>
+    <style>
+        #container{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-auto-rows: 1fr;
+        }
+        #container>div{
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            margin: 5px;
+            text-align: center;
+            padding: 10px 20px
+        }
+        #container>div>img{
+            width: 300px;
+        }
+    </style>
+</head>
+<h1>Hii My name is Ranjan Yadav</h1>
+<input oninput="search()" type="text" placeholder="search produch here">
+
+<body>
+    <div id="container">
+
+
+    </div>
+</body>
+
+</html>
+<script>
+    let bag=[];
+    let url = "https://fakestoreapi.com/products"
+    fetch(url)
+        .then((res) => res.json())
+        .then((data) => {
+            // console.log(data)
+            bag=data;
+            displayData(data)
+        })
+
+        function search(){
+            let x=document.querySelector("input").value;
+            console.log(x)
+            let newData=bag.filter((ele)=>{
+                return ele.title.toLowerCase().includes(x.toLocaleLowerCase())
+            })
+            displayData(newData)
+        }
+        
+
+    function displayData(data) {
+        document.querySelector("#container").innerHTML=""
+        data.forEach((ele) => {
+            let div = document.createElement("div")
+
+            let image = document.createElement("img");
+            image.setAttribute("src",ele.image)
+            let title = document.createElement("h2")
+            title.innerText=ele.title
+            let des=document.createElement("p")
+            des.innerText=ele.description
+            let cost = document.createElement("p")
+            cost.innerText=ele.rating.count;
+            let rating = document.createElement("p")
+            rating.innerText=ele.rating.rate
+            let button=document.createElement("button");
+            button.innerText="add to cart"
+
+            div.append(image, title,des, cost, rating,button);
+            document.querySelector("#container").append(div)
+        });
+
+
+    }
+</script>

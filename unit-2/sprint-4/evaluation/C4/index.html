@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <style>
+      /* Write all necessery css here  */
+      #product-container{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+      }
+      #product-container>div{
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        margin: 10px;
+        text-align: center;
+        padding-bottom: 20px;
+      }
+      #product-container>div>img{
+        width: 200px;
+      }
+      
+    </style>
+  </head>
+
+  <body>
+    <div class="nav">
+      <h1>Masai E-Commerce</h1>
+      <a href="./index.html">Home</a>
+      <a href="./cart.html">Cart</a>
+    </div>
+    <!-- Use this Select Tag for Filtering the Products  -->
+    <select id="filter">
+      <option value="">Filter By Category</option>
+      <option value="Laptop">Laptop</option>
+      <option value="Mobile">Mobile</option>
+      <option value="Speakers">Speakers</option>
+    </select>
+    <div id="product-container">
+      <!-- Here Append All the Products  -->
+    </div>
+  </body>
+  <script>
+    let arr=[]
+    // Write all necessery JS here 
+    let bag=JSON.parse(localStorage.getItem("cart"))||[];
+    let url="https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-tech-products";
+    fetch(url).then((rev)=>rev.json()).then((data)=>{
+      // console.log(data.data)
+      arr=data.data;
+      displayTable(data.data)
+    })
+
+    document.querySelector("#filter").addEventListener("click",function(){
+          let val=document.querySelector("#filter").value;
+          let produc=arr.filter((ele)=>{
+            return ele.brand==val;
+          })
+          displayTable(produc)
+    })
+    
+          function displayTable(data){
+            document.querySelector("#product-container").innerHTML=""
+            
+            data.forEach((ele)=>{
+              let div=document.createElement("div");
+
+            let image=document.createElement("img");
+            image.setAttribute("src",ele.img)
+            let Category=document.createElement("h3")
+            Category.innerText=ele.category
+            let brand=document.createElement("h3");
+            brand.innerText=ele.brand
+            let details=document.createElement("h3");
+            details.innerText=ele.details
+            let price=document.createElement("p")
+            price.innerText=ele.price
+
+              let count=0;
+
+            let addcart=document.createElement("button");
+            addcart.innerText="Add To Cart"
+            addcart.addEventListener("click",function(){
+              count++
+              if(count==1){
+                alert("Product Added To Cart")
+                bag.push(ele)
+                localStorage.setItem("cart",JSON.stringify(bag))
+              }
+              if(count>1){
+              alert("Product Already in Cart")
+              
+            }
+                
+            })
+            
+
+            div.append(image,Category,brand,details,price,addcart)
+            document.querySelector("#product-container").append(div);
+            })
+              
+            
+              
+            
+            
+          }
+          
+  </script>
+</html>

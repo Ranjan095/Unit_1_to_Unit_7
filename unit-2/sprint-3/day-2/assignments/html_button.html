@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML button</title>
+    <style>
+        div{
+            margin: auto;
+            margin-top: 50px;
+            height: 30px;
+            width: 800px;
+            /* border: 1px solid red; */
+            display: grid;
+            gap: 5px;
+            grid-template-columns: repeat(9,1fr);
+        }
+        /* div>button:hover{
+            cursor: pointer;
+            background-color: teal;
+            
+        } */
+        div>button:nth-child(1){
+            background-color: blue;
+            color: white;
+            border-radius: 10px;
+            border: none;
+        }div>button:nth-child(2){
+            background-color: rgb(94, 94, 94);
+            color: white;
+            border-radius: 10px;
+            border: none;
+        }
+        div>button:nth-child(3){
+            background-color: rgb(21, 102, 21);
+            color: white;
+            border-radius: 10px;
+            border: none;
+        }
+        div>button:nth-child(4){
+            background-color: rgb(226, 23, 23);
+            color: white;
+            border-radius: 10px;
+            border: none;
+        }
+        div>button:nth-child(5){
+            background-color:orange;
+            color: white;
+            border-radius: 10px;
+            border: none;
+        }
+        div>button:nth-child(6){
+            background-color: rgb(9, 141, 141);
+            color: white;
+            border-radius: 10px;
+            border: none;
+        }
+        div>button:nth-child(7){
+            background-color: rgb(249, 240, 240);
+            color: black;
+            border-radius: 10px;
+            border: none;
+        }
+        div>button:nth-child(8){
+            background-color: black;
+            color: rgb(222, 220, 220);
+            border-radius: 10px;
+            border: none;
+        }
+        div>button:nth-child(9){
+            background-color:white;
+            color:blue;
+            border-radius: 10px;
+            border: none;
+        }
+        div>button:hover{
+            cursor: pointer;
+            background-color:pink;  
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button>Primary</button>
+        <button>Secondary</button>
+        <button>Success</button>
+        <button>Danger</button>
+        <button>Warning</button>
+        <button>Info</button>
+        <button>Light</button>
+        <button>Dark</button>
+        <button>Link</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    
+    <div id="box">
+        <p>Login</p>
+        <label class="label" for="">Email ID / User Name</label><br>
+        <input id="email" class="input" type="text" placeholder="Enter your active Emai ID / Username"><br><br><br><br>
+
+        <label class="label" for="">Password</label><br>
+        <input id="pas" class="input" type="text" placeholder="Enter your Password">
+        <br><br><br><br>
+        <button class="button">Login</button><br><br>
+        <h4>Use OTP to Login</h4>
+        <a id="home" href="index.html">Go to Home</a>
+
+    </div>
+
+</body>
+
+</html>
+<script>
+
+document.querySelector(".button").addEventListener("click",function(){
+    let info=JSON.parse(localStorage.getItem("data"))||[]
+
+    let email=document.querySelector("#email").value;
+    let password=document.querySelector("#pas").value;
+    
+    let flag="wrong details";
+    info.forEach((ele)=>{
+        if( email==ele.email && password==ele.password){
+            flag="Login Success";  
+               
+        }
+       
+    })
+    alert(flag)
+    
+    });
+
+</script>

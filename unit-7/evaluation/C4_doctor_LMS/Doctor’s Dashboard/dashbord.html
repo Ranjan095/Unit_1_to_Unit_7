@@ -1,0 +1,98 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./dashbord.css" />
+  </head>
+  <body>
+    <div>
+      <a href="../index.html"><h6>Home Page</h6></a>
+      <h1>Doctor Dashbord</h1>
+      <div id="both_form">
+        <div>
+          <form id="postForm">
+            <input type="text" placeholder="name" id="name" required/><br /><br />
+            <input type="text" placeholder="image URL" id="image" required/><br /><br />
+            <select id="spec" required>
+              <option value="">Select</option>
+              <option value="Cardiologist">Cardiologist</option>
+              <option value="Dermatologist">Dermatologist</option>
+              <option value="Pediatrician">Pediatrician</option>
+              <option value="Psychiatrist ">Psychiatrist</option></select
+            ><br /><br />
+            <input
+            required
+              type="number"
+              id="experiene"
+              placeholder="experiene"
+            /><br /><br />
+            <input
+            required
+              type="text"
+              id="location"
+              placeholder="Location"
+            /><br /><br />
+            <input type="date" id="date" required/><br /><br />
+            <input type="number" placeholder="slots" id="slot" required/><br /><br />
+            <input type="number" id="fee" placeholder="fee" required/><br /><br />
+            <input type="submit" value="submit" />
+          </form>
+        </div>
+        <!-- Edit form -->
+        <div id="modle">
+          <button id="closeButton">Close</button><br/><br/>
+          <form id="patchForm">
+            <input type="text" placeholder="name" id="name" required/><br /><br />
+            <input type="text" placeholder="image URL" id="image" required/><br /><br />
+            <select id="spec" required>
+              <option value="">Select</option>
+              <option value="Cardiologist">Cardiologist</option>
+              <option value="Dermatologist">Dermatologist</option>
+              <option value="Pediatrician">Pediatrician</option>
+              <option value="Psychiatrist ">Psychiatrist</option></select
+            ><br /><br />
+            <input
+            required
+              type="number"
+              id="experiene"y
+              placeholder="experiene"
+            /><br /><br />
+            <input
+            required
+              type="text"
+              id="location"
+              placeholder="Location"
+            /><br /><br />
+            <input type="date" id="date" required/><br /><br />
+            <input type="number" placeholder="slots" id="slot" required/><br /><br />
+            <input type="number" id="fee" placeholder="fee" required/><br /><br />
+            <input type="submit" value="submit" />
+          </form>
+        </div>
+      </div>
+      <div>
+        <table>
+          <thead>
+            <th>Name of the Doctor</th>
+            <th>Specialization</th>
+            <th>experience</th>
+            <th>location</th>
+            <th>slots</th>
+            <th>Edit</th>
+            <th>Delete</th>
+            <th>Appointments</th>
+          </thead>
+          <tbody>
+            <!-- append data -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+  <script src="./dashbord.js"></script>
+</html>

@@ -1,0 +1,1 @@
+export let mainUrl="https://doctor-data.onrender.com"

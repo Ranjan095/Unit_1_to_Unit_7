@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mini Calculator</title>
+    <style>
+        body{
+            padding-top: 20px;
+           margin: auto;
+           text-align: center;
+        }
+        #inputData  >input{
+            height: 50px;
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+        #butt{
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4,100px);
+            width: 900px;
+            height: 50px;
+            /* border: 1px solid red; */
+            /* text-align: center; */
+            justify-content: space-evenly;
+        }
+        #butt>button{
+            border-radius: 20px;
+            font-size: 20px;
+            /* border: none; */
+        }
+        #butt>button:hover{
+            cursor: pointer;
+            background-color: teal;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="inputData">
+        <input id="first" type="number" placeholder="enter 1st number">
+        <input id="second" type="number"placeholder="enter 2nd number">
+    </div>
+   
+    <div id="butt">
+    <button>Add</button>
+    <button>Subtract</button>
+    <button>Multiply</button>
+    <button>Divide</button>
+    </div>
+</body>
+</html>
+<script>    
+        let item=document.querySelectorAll("#butt>button");
+        let bag="";
+        for(let i=0; i<item.length; i++){
+            item[i].addEventListener("click",myFun);
+        }
+        function myFun(event){
+            let first=document.querySelector("#first").value;
+            let second=document.querySelector("#second").value;
+            let result=event.target.innerText;
+            if(result=="Add"){
+                bag=first+"+"+second;
+                alert(eval(bag))
+            }else if(result=="Subtract"){
+                bag=first+"-"+second;
+                alert(eval(bag))
+            }else if(result=="Multiply"){
+                    bag=first+"*"+second;
+                    alert(eval(bag))
+            }else if(result=="Divide"){
+                    bag=first+"/"+second;
+                    alert(eval(bag))
+            }
+            
+        }
+        
+</script>
+
+

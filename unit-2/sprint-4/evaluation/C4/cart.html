@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart Page</title>
+    <style>
+      /* Write all necessery css here  */
+      #cart-container{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+      }
+      #cart-container>div{
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        margin: 10px;
+        text-align: center;
+        padding-bottom: 20px;
+      }
+      #cart-container>div>img{
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <h1>Masai E-Commerce</h1>
+      <a href="./index.html">Home</a>
+      <a href="./cart.html">Cart</a>
+    </div>
+    <h1 id="total">Your Total cart Price is:- <span id="cart-total">0</span></h1>
+    <div id="cart-container">
+      <!-- Here Append All the cart Products  -->
+    </div>
+  </body>
+  <script>
+    // Write all necessery JS here 
+
+      let product=JSON.parse(localStorage.getItem("cart"))
+
+      displayTable(product)
+
+
+      function displayTable(data){
+            
+            
+            data.forEach((ele)=>{
+              let div=document.createElement("div");
+
+            let image=document.createElement("img");
+            image.setAttribute("src",ele.img)
+            let Category=document.createElement("h3")
+            Category.innerText=ele.category
+            let brand=document.createElement("h3");
+            brand.innerText=ele.brand
+            let details=document.createElement("h3");
+            details.innerText=ele.details
+            let price=document.createElement("p")
+            price.innerText=ele.price
+
+            let add=1;
+            let plus=document.createElement("button")
+            plus.innerText="+"
+            let span1=document.createElement("span")
+            span1.innerText="1"
+
+              plus.addEventListener("click",function(){
+                add++
+                span1.innerText=add;
+              })
+
+            let minus=document.createElement("button")
+            minus.innerText="-"
+
+            minus.addEventListener("click",function(){
+                add--
+                if(add<1){
+                  add="1"
+                }
+                span1.innerText=add;
+                
+              })
+
+            let remove=document.createElement("button")
+            remove.innerText="Remove"
+
+            remove.addEventListener("click",function(){
+              product.forEach((ele)=>{
+                
+              })
+            })
+
+            div.append(image,Category,brand,details,price,plus,span1,minus,remove)
+            document.querySelector("#cart-container").append(div);
+            })
+          
+          }
+  </script>
+</html>
+

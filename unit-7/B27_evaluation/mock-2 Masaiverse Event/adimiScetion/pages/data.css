@@ -1,0 +1,29 @@
+
+#container{
+padding: 50px;
+display: grid;
+grid-template-columns: repeat(5,1fr);
+gap: 7px;
+}
+.box{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    text-align: center;
+    padding: 4px;
+}
+.box:hover{
+    background-color: antiquewhite;
+}
+img{
+    width: 100px;
+}
+#function{
+    display: flex;
+    justify-content:space-evenly;
+}
+#editForm{
+    margin-top: 50px;
+    display: inline-block;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    text-align: center;
+}

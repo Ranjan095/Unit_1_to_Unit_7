@@ -1,0 +1,7 @@
+ {
+      "id": 1,
+      "first_name": "Una",
+      "last_name": "Pechet",
+      "email": "upechet0@kickstarter.com",
+      "gender": "Female"
+    }

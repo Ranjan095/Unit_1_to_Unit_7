@@ -1,0 +1,66 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./data.css" />
+  </head>
+  <body>
+    <a href="../admin.html">got to Main Section</a>
+    <div id="function">
+      <div>
+        <label for="">Sort by age</label>
+        <button class="LTH">Low to high</button>
+        <button class="HTL">High to Low</button>
+      </div>
+      <div>
+        <label for="">Filter By : </label>
+        <select id="filter">
+          <option value="">Select</option>
+          <option value="FSD">FSD</option>
+          <option value="frontend">Frontend</option>
+          <option value="backend">Backend</option>
+        </select>
+      </div>
+
+      <div>
+        <form id="search">
+          <label>Search by Name : </label>
+          <input id="userName" type="text" />
+          <input type="submit">
+        </form>
+      </div>
+    </div>
+   <div id="editForm">
+    <form id="form">
+        <label>Name : </label>
+        <input id="name" type="text" placeholder="Name"></input><br/><br/>
+        <label>Age : </label>
+        <input id="age" type="number" placeholder="Age"></input><br/><br/>
+        <label>Place : </label>
+        <input id="place" type="text" placeholder="Place"></input><br/><br/>
+        <label>Batch Name : </label>
+       <select id="batchName">
+        <option value="">Select Batch Name</option>
+        <option value="WEB-13">WEB-13</option>
+        <option value="WEB-14">WEB-14</option>
+        <option value="WEB-15">WEB-15</option>
+       </select><br/><br/>
+       <label>Profession : </label>
+       <select id="profession">
+        <option value="">Select Profession</option>
+        <option value="FSD">FSD</option>
+        <option value="frontend">Frontend</option>
+        <option value="backend">Backend</option>
+       </select><br/><br/>
+       <input type="submit"></input>
+    </form>
+   </div>
+    <div id="container"></div>
+    
+  </body>
+</html>
+<script src="./data.js"></script>

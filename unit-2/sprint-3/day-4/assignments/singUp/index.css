@@ -1,0 +1,36 @@
+
+
+#container{
+    margin: auto;
+    height: 500px;
+    width: 400px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* text-align: center; */
+    padding-top: 30px;
+    padding-left: 30px;
+    margin-top: 50px;
+}
+#container>input{
+    height: 40px;
+    width: 90%;
+    border-radius: 10px;
+}
+#container>h1{
+    text-align: center;
+}
+#container>button{
+    margin-top: 40px;
+    padding: 10px;
+    background-color: green;
+    color: white;
+    border-radius: 10px;
+    font-size: 15px;
+    width: 90%;
+    
+}
+#container>button:hover{
+    cursor: pointer;
+    background-color: rgb(152, 143, 143);
+    color: black;
+}
+

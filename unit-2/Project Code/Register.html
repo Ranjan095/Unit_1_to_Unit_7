@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <div id="box">
+        <p>Find a job & grow your career</p>
+
+        <label class="label" for="">Full Name</label><br>
+        <input id="name" class="input" type="text" placeholder="What is your name"><br><br><br><br>
+        <label class="label" for="">Email ID / User Name</label><br>
+        <input id="email" class="input" type="text" placeholder="Enter your active Emai ID / Username"><br><br><br><br>
+
+        <label class="label" for="">Password</label><br>
+        <input id="password" class="input" type="text" placeholder="Enter your Password">
+        <br><br><br><br>
+        <label class="label" for="">Mobile No</label><br>
+        <input id="mobile" class="input" type="number" placeholder="Enter your Mobile No">
+        <br><br><br><br>
+        <button class="button">Register Now</button><br><br>
+        <h4>Use OTP to Login</h4>
+
+    </div>
+
+</body>
+
+</html>
+<script>
+
+    let bag = JSON.parse(localStorage.getItem("data")) || [];
+
+    document.querySelector(".button").addEventListener("click", function () {
+        let name = document.querySelector("#name").value;
+        let email = document.querySelector("#email").value;
+        let password = document.querySelector("#password").value;
+        let mobile = document.querySelector("#mobile").value;
+
+        let obj = {
+            name,
+            email,
+            password,
+            mobile,
+        }
+
+        bag.push(obj)
+        localStorage.setItem("data", JSON.stringify(bag))
+        alert("register sucess")
+
+    })
+
+</script>

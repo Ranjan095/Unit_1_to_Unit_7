@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fetch To Do</title>
+    <style>
+        table {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 60%;
+            margin: auto;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        table td,
+        table th {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #8caacf;
+        }
+
+        table tr:hover {
+            background-color: #ddd;
+        }
+
+        table th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #0468aa;
+            color: white;
+            text-align: center;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>ToDo</h1>
+    <h2></h2>
+    <table>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>title</th>
+                <th>status</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</body>
+
+</html>
+<script>
+    let x = ("https://jsonplaceholder.typicode.com/todos")
+    fetch(x)
+        .then((result) => result.json())
+        .then((arr) => displayData(arr))
+        .catch((error) => displayErr(error))
+
+        function displayErr(error){
+            document.querySelector("h2").innerText=error;
+        }
+
+    function displayData(arr) {
+        arr.forEach((ele) => {
+            let tr = document.createElement("tr");
+
+            let td1 = document.createElement("td")
+            td1.innerText = ele.id;
+            let td2 = document.createElement("td")
+            td2.innerText = ele.title
+            let td3 = document.createElement("td")
+            td3.innerText = ele.completed;
+            tr.append(td1, td2, td3)
+            document.querySelector("tbody").append(tr);
+        })
+    }
+    console.log(displayData)
+</script>

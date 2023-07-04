@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <style>
+        input{
+            font-size: 30px;
+            height: 50px;
+        }
+    </style>
+    <style>
+        #container{
+            
+            margin: auto;
+            height: 800px;
+            width: 600px;
+            /* border: 1px solid red; */
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+            text-align: center;
+        }
+        button{
+            height: 50px;
+            margin-top: 100px;
+        }
+        button:hover{
+            cursor: pointer;
+            background-color: teal;
+            color: white;
+        }
+        #display{
+            color:green;
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Check your BMI</h1>
+        <h2>Enter your weight and height below to check your BMI result</h2>
+        <h2>Put your weight in here (KG)</h2>
+        <input id="kg" type="number" placeholder="KG">
+        <h2>And your height here (CM)</h2>
+        <input id="cm" type="number" placeholder="CM">
+        <h1 id="display"></h1>
+        <br>
+        <button>Calculate BMI</button>
+
+    </div>
+</body>
+</html>
+<script>
+    
+    document.querySelector("button").addEventListener("click",myfun);
+    function myfun(){
+        let wei=document.querySelector("#kg").value;
+        let hei=document.querySelector("#cm").value;
+        let m=hei/100;
+        let BMI=wei/(m*m)
+        if(BMI<=18.4){
+            document.getElementById("display").innerText= "your BMI is "+BMI+" which minse Your are UnderWeight"
+
+        }else if(BMI>=18.5 && BMI <= 24.9){
+            document.getElementById("display").innerText="your BMI is "+BMI+" which minse Your are Normal Weight"
+        }else if(BMI>=25 && BMI <=29.9){
+            document.getElementById("display").innerText="your BMI is "+BMI+" which minse Your are Over weight"
+        }else if(BMI>=30){
+            document.getElementById("display").innerText="your BMI is "+BMI+" which minse Your are Obese"
+        }
+        
+    }
+</script>

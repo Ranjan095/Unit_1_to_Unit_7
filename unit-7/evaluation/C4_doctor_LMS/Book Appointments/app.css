@@ -1,0 +1,28 @@
+
+#container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+#box{
+    box-shadow: rgba(154, 48, 48, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    padding: 20px;
+}
+.imgNmae{
+    text-align: center;
+}
+
+.image{
+    width: 100px;
+}
+.buttonBox{
+  text-align: center;
+}
+.buttonBox button{
+    color: white;
+    background-color: green;
+    border: none;
+    padding: 5px;
+    border-radius: 3px;
+}
+

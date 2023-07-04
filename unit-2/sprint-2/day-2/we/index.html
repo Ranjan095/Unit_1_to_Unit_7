@@ -1,0 +1,66 @@
+
+<html>
+    <head>
+        <title>Flex</title>
+        <style>
+            * {
+                margin: 0px;
+                padding: 0px;
+            }
+            .nav{
+                height: 100px;
+                background-color: green;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+               padding: 0px 25px;
+               
+            }
+            .nav>div{
+                
+                width: 500px;
+                display: flex;
+               justify-content: space-between;
+               color: white;
+               /* border: 2px solid red;   */
+            }
+            .gallery{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            #mai{
+                text-align: center;
+                margin: 20px;
+                color: red;
+            }
+            .gallery>img{
+                width: 30%;
+                padding: 0px 30px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="nav">
+            <h1>masai</h1>
+        
+        <div>
+            <h1>HOME</h1>
+            <h1>GALLERY</h1>
+            <h1>ABOUT</h1>
+        </div>
+        </div>
+        <h1 id="mai">PHOTO GALLERY</h1>
+        <div class="gallery">
+            <img src="https://preview.colorlib.com/theme/pentax/img/project/1.jpg.webp">
+            <img src="https://preview.colorlib.com/theme/pentax/img/project/1.jpg.webp">
+            <img src="https://preview.colorlib.com/theme/pentax/img/project/1.jpg.webp">
+            <img src="https://preview.colorlib.com/theme/pentax/img/project/1.jpg.webp">
+            <img src="https://preview.colorlib.com/theme/pentax/img/project/1.jpg.webp">
+            <img src="https://preview.colorlib.com/theme/pentax/img/project/1.jpg.webp">
+
+            </div>
+        
+    </body>
+</html>

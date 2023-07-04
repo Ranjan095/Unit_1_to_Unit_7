@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studylab</title>
+    <style>
+        .nav{
+            height: 100px;
+            width: auto;
+            /* border: 1px solid red; */
+            display: flex;
+            margin: auto;
+            text-align: center;
+            justify-content:space-between;
+            padding: 5px 100px 0px 100px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+        }
+        .nav>div{
+            font-size: 20px;
+            width: 1000px;
+            /* border: 1px solid blue; */
+            padding-top: 30px;
+             display: flex;
+             justify-content:space-evenly;
+             
+             /* border: 1px solid red; */
+            
+        }
+        .nav>div>div{
+            /* border: 1px solid blue; */
+            font-weight: bold;
+        }
+        .nav>h1{
+            background-color: rgb(33, 60, 142);
+            color: white;
+            border-radius: 10px;
+            padding-top: 7px;
+           
+        }
+        .box{
+            display: grid;
+            height: auto;
+            /* border: 2px solid red; */
+            grid-template-columns: repeat(4 , 1fr);
+            grid-template-rows:repeat(2 , 1fr);
+            gap: 50px;
+            /* text-align: center; */
+            margin: auto;
+            padding: 100px;
+            
+        }
+        
+        #first{
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 3;
+            
+        }
+        #sec{
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            padding-left: 20px;
+        }
+        #th{
+            grid-column-start: 4;
+            grid-column-end: 5;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            padding-left: 20px;
+        }
+        #forth{
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            padding-left: 20px;
+
+        }
+        #fifth{
+            grid-column-start: 4;
+            grid-column-end: 5;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;  
+            padding-left: 20px; 
+        }
+        .box img{
+            width: 200px;
+            border-radius: 50%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <h1>StudyLab</h1>
+        <div>
+            <div>Home</div>
+        <div>About</div>
+        <div>Course</div>
+        <div>Instructor</div>
+        <div>Blog</div>
+        <div>Contact</div>
+        </div>
+    </div>
+        <!-- second part -->
+
+        <div class="box">
+            <div id="first">
+                <P>WELCOME TO STUDYLAB</P>
+                <h1>We Are StudyLab An Online Learning Center</h1>
+                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
+
+                    Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+            </div>
+            <div id="sec">
+                <img src="https://media.istockphoto.com/photos/creating-effective-content-on-sticky-notes-isolated-on-white-picture-id1157430259?b=1&k=20&m=1157430259&s=170667a&w=0&h=f3PPnSXJhQ0yamfuUKFfsth7N_fiaq5Lj6eumvK5hQI=">
+                <h3>Top Quality Content</h3>
+                <p>A small river named Duden flows by their place and supplies</p>
+            </div>
+            <div id="th">
+                <img src="https://media.istockphoto.com/photos/creating-effective-content-on-sticky-notes-isolated-on-white-picture-id1157430259?b=1&k=20&m=1157430259&s=170667a&w=0&h=f3PPnSXJhQ0yamfuUKFfsth7N_fiaq5Lj6eumvK5hQI=">
+                <h3>Highly Skilled Instructor
+                </h3>
+                <p>A small river named Duden flows by their place and supplies</p>
+            </div>
+            <div id="forth">
+                <img src="https://media.istockphoto.com/photos/creating-effective-content-on-sticky-notes-isolated-on-white-picture-id1157430259?b=1&k=20&m=1157430259&s=170667a&w=0&h=f3PPnSXJhQ0yamfuUKFfsth7N_fiaq5Lj6eumvK5hQI=">
+                <h3>World Class & Quiz</h3>
+                <p>A small river named Duden flows by their place and supplies</p>
+            </div>
+            <div id="fifth"><img src="https://media.istockphoto.com/photos/creating-effective-content-on-sticky-notes-isolated-on-white-picture-id1157430259?b=1&k=20&m=1157430259&s=170667a&w=0&h=f3PPnSXJhQ0yamfuUKFfsth7N_fiaq5Lj6eumvK5hQI=">
+                <h3>Get Certified</h3>
+                <p>A small river named Duden flows by their place and supplies</p>
+            </div>
+        </div>
+        
+    
+</body>
+</html>

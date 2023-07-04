@@ -1,0 +1,44 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>User</h1>
+    <a href="../index.html"><h3>home Page</h3></a>
+    <div>
+      <form>
+        <label>Name : </label>
+        <input required placeholder="name" type="text" id="name" /><br /><br />
+        <label>Profile Picture</label>
+        <input required type="text" id="image" placeholder="URL.." /><br /><br />
+        <label>Email</label>
+        <input required type="text" id="email" placeholder="email.." /><br /><br />
+        <label>Password</label>
+        <input required type="text" id="password" placeholder="password.." /><br /><br />
+        <label>Profession</label>
+        <select required id="profession">
+          <option value="">Select</option>
+          <option value="student">Student</option>
+          <option value="web_developer">Web Developer</option>
+          <option value="graphic_designer">Graphic Designer</option></select
+        ><br /><br />
+        <label>Skills</label>
+        <input required type="text" id="skills" placeholder="Skills.." /><br /><br />
+        <label>Hourly Rate</label>
+        <input required
+          type="number"
+          id="hourly_rate"
+          placeholder="Hourly Rate.."
+        /><br /><br />
+        <input type="submit" />
+      </form>
+    </div>
+  </body>
+  <script src="./user.js"></script>
+</html>

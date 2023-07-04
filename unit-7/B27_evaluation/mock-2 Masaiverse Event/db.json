@@ -1,0 +1,76 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "chandra",
+      "age": 25,
+      "place": "Visakhapatnam",
+      "batch_name": "WEB-21",
+      "profession": "backend"
+    },
+    {
+      "id": 2,
+      "name": "nrupul",
+      "age": 37,
+      "place": "Vijayawada",
+      "batch_name": "WEB-18",
+      "profession": "backend"
+    },
+    {
+      "name": "ranjan",
+      "age": 26,
+      "place": "Bihar",
+      "batch_name": "WEB-13",
+      "profession": "frontend",
+      "id": 4
+    },
+    {
+      "name": "ranjan",
+      "age": 26,
+      "place": "Bihar",
+      "batch_name": "WEB-13",
+      "profession": "frontend",
+      "id": 5
+    },
+    {
+      "name": "ranjan",
+      "age": 26,
+      "place": "Bihar",
+      "batch_name": "WEB-13",
+      "profession": "frontend",
+      "id": 6
+    },
+    {
+      "name": "ranjan",
+      "age": 26,
+      "place": "Bihar",
+      "batch_name": "WEB-13",
+      "profession": "frontend",
+      "id": 7
+    },
+    {
+      "name": "ranjan",
+      "age": 26,
+      "place": "Bihar",
+      "batch_name": "WEB-13",
+      "profession": "FSD",
+      "id": 8
+    },
+    {
+      "name": "ranjan",
+      "age": 26,
+      "place": "Bihar",
+      "batch_name": "WEB-13",
+      "profession": "FSD",
+      "id": 9
+    },
+    {
+      "name": "ranjan",
+      "age": 26,
+      "place": "Bihar",
+      "batch_name": "WEB-13",
+      "profession": "FSD",
+      "id": 10
+    }
+  ]
+}

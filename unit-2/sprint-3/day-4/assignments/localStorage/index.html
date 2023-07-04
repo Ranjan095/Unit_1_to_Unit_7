@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage</title>
+    <style>
+        #box{
+            padding-top: 50px;
+            margin: auto;
+            text-align: center;
+            height: 400px;
+            width: 400px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        #box>button{
+            margin: auto;
+            display: block;
+            height: 30px;
+            width: 200px;
+        } 
+    </style>
+</head>
+<body>
+    <div id="box">
+        <button id="ls">LS</button>
+        <h1 id="display">..</h1>
+        <button id="get">Get name</button>
+        <button id="mobile">MobileNumber</button>
+        <button id="getMobile">Get Mobile Number</button>
+        <button id="hobbies">Store Hobbies to LS</button>
+        <button id="getHobbies">get hobbies</button>
+        <button id="studentData">Store Students Data to LS</button>
+        <button id="getStudentData">Get Students data from LS</button>
+    </div>
+    
+</body>
+</html>
+
+<script>
+    document.querySelector("#ls").addEventListener("click",myFun);
+    function myFun(){
+        localStorage.setItem("username","Masai School")
+    }
+
+    document.querySelector("#get").addEventListener("click",getName);
+    function getName(){
+        let name=localStorage.getItem("username");
+        document.querySelector("#display").innerText=name
+    }
+    document.querySelector("#mobile").addEventListener("click",mobile);
+    function mobile(){
+        localStorage.setItem("mobile","999999999")
+    }
+    document.querySelector("#getMobile").addEventListener("click",getMobile);
+    function getMobile(){
+        let mobileNum=localStorage.getItem("mobile")
+        document.querySelector("#display").innerText=mobileNum;
+    }
+    document.querySelector("#hobbies").addEventListener("click",hobbiesFun);
+    let hobbies =["cricket","music"]
+    function hobbiesFun(){
+        localStorage.setItem("my_hobbies",JSON.stringify(hobbies))
+    }
+    document.querySelector("#getHobbies").addEventListener("click",getHobbiesFun);
+    function getHobbiesFun(){
+        let hobbies=JSON.parse(localStorage.getItem("my_hobbies"));
+        for(let i=0; i<hobbies.length; i++){
+     console.log(hobbies[i])
+ }  
+}
+
+document.querySelector("#studentData").addEventListener("click",studentDataFun);
+let students =[
+    {"name":"Nrupul",place:"Banglore"},
+    {"name":"Prateek",place:"Mumbai"}
+]
+function studentDataFun(){
+    localStorage.setItem("students", JSON.stringify(students))
+    
+}
+
+document.querySelector("#getStudentData").addEventListener("click", getStudentDataFun);
+function getStudentDataFun(){
+    let studentData=JSON.parse(localStorage.getItem("students"))
+    for(let i=0; i<studentData.length; i++){
+        console.log(studentData[i].name)
+    }
+    
+}
+
+   
+</script>
+
+
+   
